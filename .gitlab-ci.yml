@@ -1,0 +1,30 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  image: python:3.9-slim-buster
+  script:
+    - python --version
+    - pip --version
+    - pip install virtualenv
+    - virtualenv venv --python=python3.9
+    - source venv/bin/activate
+    - pip install -r requirements.txt
+  artifacts:
+    paths:
+      - venv/  # capture the virtual environment
+      - build/  # capture any build artifacts
+
+test:
+  stage: test
+  image: python:3.9-slim-buster
+  before_script:
+    - python --version
+    - pip --version
+    - source venv/bin/activate
+  script:
+    - python src/manage.py test core
+  dependencies:
+    - build

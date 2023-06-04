@@ -1,0 +1,76 @@
+{
+    "NOT_AUTHENTICATED" : {
+        "success": false,
+        "error" : {
+            "message": "Authentication credentials were not provided.",
+            "code":    "NOT_AUTHENTICATED"
+        }
+    },
+
+    "AUTHENTICATION_FAILED" : {
+        "success": false,
+        "error" : {
+            "message": "Invalid username/password.",
+            "code":    "AUTHENTICATION_FAILED"
+        }
+    },
+
+    "INTERNAL_SERVER_ERROR" : {
+        "success": false,
+        "error" : {
+            "message": "Something went wrong. Please contact the administrator.",
+            "code":    "INTERNAL_SERVER_ERROR"
+        }
+    },
+
+    "INVALID_GROUP" : {
+        "success": false,
+        "error" : {
+            "message": "User not in required group",
+            "code":    "INVALID_GROUP"
+        }
+    },
+    "BAD_REQUEST" : {
+        "success": false,
+        "error" : {
+            "message": "Please check your API inputs again",
+            "code":    "BAD_REQUEST"
+        }
+    },
+
+    "NOT_FOUND" : {
+        "success": false,
+        "error" : {
+            "message": "The requested resource was not found",
+            "code": "NOT_FOUND"
+        }
+    },
+    "CONFLICT" : {
+        "success": false,
+        "error" : {
+            "message": "Duplicate Record found for this operation",
+            "code": "CONFLICT"
+        }
+    },
+    "SERVICE_UNAVAILABLE" : {
+        "success": false,
+        "error" : {
+            "message": "Service is unavailable at the moment.",
+            "code": "SERVICE_UNAVAILABLE"
+        }
+    },
+    "PRECONDITION_FAILED" : {
+        "success": false,
+        "error" : {
+            "message": "Mandetory resource for this operation missing",
+            "code": "PRECONDITION_FAILED"
+        }
+    },
+    "UNSUPPORTED_MEDIA_TYPE" : {
+        "success": false,
+        "error" : {
+            "message": "Media type not supported",
+            "code": "UNSUPPORTED_MEDIA_TYPE"
+        }
+    }
+}
