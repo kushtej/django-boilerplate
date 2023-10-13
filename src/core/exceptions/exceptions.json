@@ -1,4 +1,12 @@
 {
+    "BAD_REQUEST" : {
+        "success": false,
+        "error" : {
+            "message": "Please check your API inputs again",
+            "code":    "BAD_REQUEST"
+        }
+    },
+    
     "NOT_AUTHENTICATED" : {
         "success": false,
         "error" : {
@@ -15,6 +23,13 @@
         }
     },
 
+    "METHOD_NOT_ALLOWED" : {
+        "success": false,
+        "error" : {
+            "message": "Request Method is Not Allowed",
+            "code":    "METHOD_NOT_ALLOWED"
+        }
+    },
     "INTERNAL_SERVER_ERROR" : {
         "success": false,
         "error" : {
@@ -28,13 +43,6 @@
         "error" : {
             "message": "User not in required group",
             "code":    "INVALID_GROUP"
-        }
-    },
-    "BAD_REQUEST" : {
-        "success": false,
-        "error" : {
-            "message": "Please check your API inputs again",
-            "code":    "BAD_REQUEST"
         }
     },
 

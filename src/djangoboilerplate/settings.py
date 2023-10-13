@@ -135,7 +135,7 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'EXCEPTION_HANDLER': 'core.exceptions.exceptionshandler.exception_handler',
+    'EXCEPTION_HANDLER': 'core.exceptions.exceptionshandler.custom_exception_handler',
 }
 
 if not DEBUG:

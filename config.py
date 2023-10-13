@@ -24,6 +24,7 @@ CONFIGURATION = {
         # Appname : Crons list
         'core' : [
             {
+                'name' : 'CronName',
                 'enabled' : False,
                 'frequency': '30 1 * * *',
                 'handler': 'chatbot.crons.cronhandler.main',
