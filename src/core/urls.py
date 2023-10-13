@@ -20,11 +20,10 @@ from django.conf import settings
 from . import views
 
 if not settings.DEBUG:
+    from djangoboilerplate import views as ExceptionViews
     from django.conf.urls import handler404, handler500
-    handler404 = views.error404
-    handler500 = views.error500
 
-urlpatterns = [
-    path('', views.ping),
-    path('index/', views.index, name='sample'),
-]
+    handler404 = ExceptionViews.error404
+    handler500 = ExceptionViews.error500
+
+urlpatterns = [path("", views.ping), path("index/", views.index, name="sample")]

@@ -8,11 +8,11 @@ from rest_framework.test import APIRequestFactory
 
 from .views import ping
 
-class PingViewTestCase(TestCase):
 
+class PingViewTestCase(TestCase):
     def test_ping_view(self):
         factory = APIRequestFactory()
-        request = factory.get('/ping/')
+        request = factory.get("/ping/")
         response = ping(request)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
