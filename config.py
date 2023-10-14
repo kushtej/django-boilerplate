@@ -21,7 +21,7 @@ CONFIGURATION = {
                 "name": "CronName",
                 "enabled": False,
                 "frequency": "30 1 * * *",
-                "handler": "chatbot.crons.cronhandler.main",
+                "handler": "core.crons.cronhandler.main",
                 "args": [{}],
             }
         ]
