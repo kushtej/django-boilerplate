@@ -30,7 +30,7 @@ test() {
     python src/manage.py test $1
 }
 
-### --lint - lint code
+### --lint : lint code
 lint() {
     isort --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=100 src/ app.py config.py -y
     black --line-length=100 src/ config.py

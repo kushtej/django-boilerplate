@@ -2,7 +2,7 @@ import os
 
 CONFIGURATION = {
     "NAME": "PROJECT_NAME",  # Name of the Service
-    "DEBUG": False,
+    "DEBUG": True,
     "ALLOWED_HOSTS": ["*"],
     "SERVICE_SECRET_KEY": os.environ.get("SERVICE_SECRET_KEY", "#ezksyz+l7"),  # Service secret key
     # Database config if using MySQL
