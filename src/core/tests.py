@@ -12,10 +12,7 @@ from .views import ping
 class PingViewTestCase(TestCase):
     def test_ping_view(self):
         factory = APIRequestFactory()
-        request = factory.get("/ping/")
+        request = factory.get("/")
         response = ping(request)
-
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        response_data = json.loads(response.content)
-        expected_data = {"success": True, "result": "Service is Active"}
-        self.assertEqual(response_data, expected_data)
+        self.assertEqual(response.data, {"success": True, "result": "Service is Active"})
