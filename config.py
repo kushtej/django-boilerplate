@@ -1,10 +1,14 @@
 import os
+import secrets
 
 CONFIGURATION = {
     "NAME": "PROJECT_NAME",  # Name of the Service
     "DEBUG": True,
     "ALLOWED_HOSTS": ["*"],
-    "SERVICE_SECRET_KEY": os.environ.get("SERVICE_SECRET_KEY", "#ezksyz+l7"),  # Service secret key
+    "SERVICE_SECRET_KEY": os.environ.get(
+        "SERVICE_SECRET_KEY", secrets.token_hex(25)
+    ),  # Service secret key
+    "INSTALLED_APPS": ["core"],
     # Database config if using MySQL
     "DATABASE": {
         "name": os.environ.get("DB_NAME", "DB_NAME"),

@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_crontab",
     "rest_framework",
-    "core",
 ]
+
+INSTALLED_APPS = INSTALLED_APPS + CONFIG["INSTALLED_APPS"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

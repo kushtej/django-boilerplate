@@ -32,7 +32,7 @@ test() {
 
 ### --lint : lint code
 lint() {
-    isort --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=100 src/ app.py config.py -y
+    isort --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=100 src/ config.py -y
     black --line-length=100 src/ config.py
 }
 

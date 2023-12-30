@@ -1,8 +1,6 @@
 from django.conf import settings
-import os
 from pathlib import Path
-import json
-import sys
+import ultraimport
 
 BASE_APP_PATH = str(Path(__file__).resolve().parent.parent.parent.parent)
 
@@ -13,7 +11,7 @@ RESOURCES_BASE_PATH = getattr(settings, "RESOURCES_BASE_PATH", BASE_APP_PATH + "
 WEB_BASE_PATH = getattr(settings, "WEB_BASE_PATH", BASE_APP_PATH + "/web/")
 
 # Path to Configuration
-sys.path.insert(1, BASE_APP_PATH)
-from config import CONFIGURATION
+config = ultraimport("__dir__/../../../config.py")
+from config import CONFIGURATION as CONFIG
 
-CONFIG = getattr(settings, "CONFIG", CONFIGURATION)
+CONFIG = getattr(settings, "CONFIG", CONFIG)
